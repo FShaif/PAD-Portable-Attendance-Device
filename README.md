@@ -61,5 +61,6 @@ This repository contains Python scripts for a portable attendance system utilizi
 
 ## Acknowledgments
 
+- Special Thanks to my team members in this project
 - This project utilizes the Adafruit Fingerprint Sensor library and other open-source libraries.
 - Thanks to Adafruit Industries for the fingerprint sensor and MIT for the license model.
