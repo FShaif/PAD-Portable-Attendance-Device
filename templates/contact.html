@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us</title>
+  {% extends "layout.html" %}
+  {% block head %}
+  {{ super() }}
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      color: #333333;
+      margin: 0;
+      padding: 0;
+      background-image: url("/static/images/contact.page.png");      
+
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+
+    textarea {
+      height: 120px;
+    }
+
+    input[type="submit"] {
+      background-color: #333333;
+      color: #ffffff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #555555;
+    }
+
+    /* Media Queries */
+    @media (max-width: 600px) {
+      .container {
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      input[type="submit"] {
+        padding: 8px 16px;
+      }
+    }
+  </style>
+
+</head>
+{% endblock %}
+
+<body>
+  {% block myContent %}
+
+  <div class="container">
+    <h1>Contact Us</h1>
+    
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your Name">
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Your Email">
+      </div>
+      
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Your Message"></textarea>
+      </div>
+      
+      <div class="form-group">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+
+    <div id="successMessage" class="form-success" style="display: none;">
+      Your message has been sent successfully!
+    </div>
+  </div>
+
+  <script>
+    var contactForm = document.getElementById("contactForm");
+    var successMessage = document.getElementById("successMessage");
+
+    contactForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      // Simulating form submission
+      setTimeout(function() {
+        contactForm.reset();
+        successMessage.style.display = "block";
+      }, 1000);
+    });
+  </script>
+
+  {% endblock %}
+</body>
+</html>

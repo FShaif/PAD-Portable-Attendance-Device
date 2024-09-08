@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ 
+    <title>About Us</title>
+    {% extends "layout.html" %}
+    {% block head %}
+    {{ super() }}
+    <!-- Favicon no longer needed -->
+    <!-- <link rel="shortcut icon" type="image/jpg" href="static\images\favicon.ico"/> -->
+  
+  <style>
+    body 
+    {
+      font-family: Arial, sans-serif;
+      background-image: url("/static/images/about-use-page.png");      
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+  </style>
+  {%endblock head%}
+
+</head>
+
+<body>
+  {%block myContent%}
+  <!-- Main Content -->
+  
+  <div class="container">
+    
+      <div class="col-lg-12 col-md-15 mx-auto">
+  
+        <h1>About Us</h1>
+        <p>We are a group of students from the College of Engineering (CE) in the University of Business and Technology (UBT)</p>
+        <p>We are tasked with a project of creating a Portable Attendance Device using multiple programming languages like HTML, CSS, JavaScript, and Python.</p>
+    <div class="row">
+        <div class="container mt-3">
+          <div class="d-flex">
+  
+            <div class="card col-lg-2 col-md-4" style="width: 15rem; background-color:inherit" >
+              <img class="card-img-top" src="/static/images/img_avatar1.png" alt="Card image" style="width: 40%">
+  
+              <div class="card-body" style="background-color:inherit">
+                <h4 class="card-title">Fahad</h4>
+                <small class="card-id">PB0086</small>
+                <p class="card-text">Software Engineering - General</p>
+                <a href="https://www.linkedin.com/in/fahadshaif" class="btn btn-primary">See Profile</a>
+              </div>
+            </div>
+  
+            <div class="card col-lg-2 col-md-4" style="width: 15rem; background-color:inherit">
+              <img class="card-img-top" src="/static/images/img_avatar1.png" alt="Card image" style="width: 40%">
+  
+              <div class="card-body"style="background-color:inherit">
+                <h4 class="card-title">Saif</h4>
+                <small class="card-id">UA0414</small>
+                <p class="card-text">Software Engineering - Cyber security</p>
+                <a href="https://www.linkedin.com/in/ssalghamdi" class="btn btn-primary">See Profile</a>
+              </div>
+            </div>
+  
+            <div class="card col-lg-2 col-md-4" style="width: 15rem; background-color:inherit">
+              <img class="card-img-top" src="/static/images/img_avatar1.png" alt="Card image" style="width: 40%">
+  
+              <div class="card-body"style="background-color:inherit">
+                <h4 class="card-title">Yousef</h4>
+                <small class="card-id">UA0033</small>
+                <p class="card-text">Software Engineering - Cyber security</p> 
+                <a href="https://www.linkedin.com/in/yalshaibani" class="btn btn-primary">See Profile</a>
+              </div>
+            </div>
+  
+            <div class="card col-lg-2 col-md-4" style="width: 15rem; background-color:inherit">
+              <img class="card-img-top" src="/static/images/img_avatar1.png" alt="Card image" style="width: 40%">
+  
+              <div class="card-body"style="background-color:">
+                <h4 class="card-title">Mohammed</h4>
+                <small class="card-id">SA0359</small>
+                <p class="card-text">Software Engineering - Cyber security</p>
+                <a href="https://www.linkedin.com/in/Fazie-gh" class="btn btn-primary">See Profile</a>
+              </div>
+            </div>
+  
+            <div class="card col-lg-2 col-md-4" style="width: 15rem; background-color:inherit">
+              <img class="card-img-top" src="/static/images/img_avatar1.png" alt="Card image" style="width: 40%">
+  
+              <div class="card-body"style="background-color:inherit">
+                <h4 class="card-title">Abdulmajeed</h4>
+                <small class="card-id">SA0126</small>
+                <p class="card-text">Software Engineering - Cyber security</p>
+                <a href="https://www.linkedin.com/in/aaltarabulsi" class="btn btn-primary">See Profile</a>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+{%endblock myContent %}
+</html>

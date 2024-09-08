@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Class Presence</title>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    button{
+      background-color: aquamarine;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap; /* Allow elements to wrap */
+    }
+    
+    .teacher-name {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    
+    .class-presence {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    
+    .class-card {
+      min-width: 200px; /* Set minimum width to ensure all text fits */
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 10px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s ease-in-out;
+      cursor: pointer;
+    }
+    
+    .class-card:hover {
+      transform: scale(1.05);
+    }
+    
+    .class-name {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      margin-top: 10px;
+      text-align: center;
+    }
+    
+    .presence {
+      font-size: 14px;
+      color: #777;
+      margin-top: 5px;
+    }
+    
+    .present {
+      color: green;
+      font-weight: bold;
+    }
+    
+    .absent {
+      color: red;
+      font-weight: bold;
+    }
+    
+    .login-form {
+      width: 300px;
+      margin: 0 auto;
+    }
+    
+    .login-form input[type="text"],
+    .login-form input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    
+    .login-form button {
+      width: 100%;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .login-form button:hover {
+      background-color: #555;
+    }
+    
+    .hidden {
+      display: none;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="login-form">
+    <h1 style="padding-left:2rem;">Class Presence</h1>
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+    <button id="loginButton">Login</button>
+  </div>
+
+  <div class="container">
+    
+    <div class="class-presence hidden" id="classPresence">
+      <div class="class-card">
+        <h2 class="teacher-name">ENG.MOHAMMED</h2>
+        <div class="class-name">SOFTWARE MAINTENANCE AND EVOLUTION_2_02</div>
+        <div class="presence present">Present</div>
+        <button onclick="window.location.href='SOFTWARE_MAINTENANCE_AND_EVOLUTION_2_02'" class="btn btn-primary" style="background-color: aqua;">Class A</button>      
+      </div>
+    </div>
+    
+    <div class="class-presence hidden" id="classPresence2">
+      <div class="class-card">
+        <h2 class="teacher-name">ENG.MOHAMMED</h2>
+        <div class="class-name">INTERNET_APPLICATION_1_01</div>
+        <div class="presence present">Present</div>
+        <button onclick="window.location.href='INTERNET_APPLICATION_1_01'" class="btn btn-primary" style="background-color: aqua;">Class B</button>
+      </div>
+    </div>
+
+    <div class="class-presence hidden" id="classPresence3">
+      <div class="class-card">
+        <h2 class="teacher-name">ENG.fahad</h2>
+        <div class="class-name">SOFTWARE_MAINTENANCE_AND_EVOLUTION_1_02</div>
+        <div class="presence present">Present</div>
+        <button onclick="window.location.href='SOFTWARE_MAINTENANCE_AND_EVOLUTION_1_02'" class="btn btn-primary" style="background-color: aqua;">Class C</button>
+      </div>
+    </div>
+     
+  </div>
+
+  <script>
+    document.getElementById("loginButton").addEventListener("click", function() {
+      var username = document.querySelector("input[type='text']").value;
+      var password = document.querySelector("input[type='password']").value;
+
+      // Perform login validation here
+      // For this example, let's assume the username is "admin" and password is "password"
+      
+      if (username === "admin3" && password === "password") {
+        document.querySelector(".login-form").classList.add("hidden");
+        document.getElementById("classPresence").classList.remove("hidden");
+        document.getElementById("classPresence2").classList.remove("hidden");
+        document.getElementById("classPresence3").classList.remove("hidden");
+        
+      }
+
+      else if (username === "admin" && password === "password") {
+        document.querySelector(".login-form").classList.add("hidden");
+        document.getElementById("classPresence").classList.remove("hidden");
+        document.getElementById("classPresence2").classList.remove("hidden");
+      } else if (username === "admin2" && password === "password2") {
+        document.querySelector(".login-form").classList.add("hidden");
+        document.getElementById("classPresence3").classList.remove("hidden");
+        document.getElementById("classPresence4").classList.remove("hidden");
+      } else {
+        alert("Wrong credentials. Please try again.");
+      }
+    });
+  </script>
+  
+</body>
+</html>

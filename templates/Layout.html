@@ -1,0 +1,167 @@
+<!-- layout.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {%if title%}
+    <title>{{title}} - Portable Attendance Device</title>
+    {%else%}
+    <title>Portable Attendance Device</title>
+    {%endif%}
+    <base href="http://127.0.0.1:5000">
+
+    <!-- JQuery core --> 
+    <!-- <script src="static/vendor/jquery/jquery.min.js"></script> -->    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>  
+    <!-- Bootstrap core -->
+    <!-- 
+    <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Map Link Not Working
+    <link href="/bootstrap/css/bootstrap.css.map" rel="stylesheet">
+    <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+    -->
+    
+    <!-- Custom fonts for this template -->
+    <link href="/static/vendor/font-awesome/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Link to style.css for custom buttons -->
+    <link rel="STYLESHEET" type="text/css" href="/static/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/card.css"rel="">
+
+
+    <!-- Favicon -->
+    <!-- Normal Favicon html link -->
+    
+    <!-- old attempt
+      <link rel="shortcut icon" type="image/jpg" href="/static/images/favicon.ico"/>
+    -->
+
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
+
+
+
+    
+    
+    
+    <!-- <style>
+      table, th, td {
+        border: 1px solid rgb(104, 101, 101);
+        padding: 8px;
+        text-align: center;
+      }
+    </style> -->
+
+  {% endblock %}
+</head>
+<body>
+
+  <header>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="index">
+        <i class="fa-solid fa-house"></i></a>       
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login">Class Presence</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="course">all course</a>
+            </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact">Contact Us</a>
+              <li class="nav-item">
+                <a class="nav-link" href="FAQ">Questions? We've Got Answers!</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+    <!-- Main Content -->
+    {% block myContent %}
+    {% endblock myContent%}
+    
+  <!-- Footer -->
+<footer style="margin-top: auto;">
+  <hr>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <ul class="list-inline text-center">
+          <li class="list-inline-item">
+            <a href="index">
+              <span class="fa-stack fa-lg">
+                <i class="fa-solid fa-house"></i>
+              </span>Home Page
+            </a>
+          </li>
+         
+          
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="course">
+              <span class="fa-stack fa-lg">
+                <i class="fa-solid fa-show-course"></i>
+              </span>Class Presence
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="about">
+              <span class="fa-stack fa-lg">
+                <i class="fa-solid fa-info"></i>
+              </span>About Us
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="contact">
+              <span class="fa-stack fa-lg">
+                <i class="fa-solid fa-phone"></i>
+              </span>Contact Us
+
+              <a href="FAQ">
+                <span class="fa-stack fa-lg">
+                  <i class="fa-solid fa--screen-button"></i>
+                </span>Questions? We've Got Answers!
+              </a>
+            </a>
+          </li>
+        </ul>
+        <p class="text-center text-muted">© 2024 Portable Attendance Device:)</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>

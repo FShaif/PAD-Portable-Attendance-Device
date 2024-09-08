@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Courses</title>
+  {% extends "layout.html" %}
+  {% block head %}
+  {{ super() }}
+  <style>
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .class-presence {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .class-card {
+      background-color: #f2f2f2;
+      border-radius: 10px;
+      padding: 20px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      flex: 0 0 calc(33% - 40px);
+    }
+
+    .teacher-name {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+
+    .class-name {
+      font-size: 20px;
+      font-weight: bold;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .presence {
+      display: inline-block;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .present {
+      background-color: #28a745;
+      color: #fff;
+    }
+
+    .absent {
+      background-color: #dc3545;
+      color: #fff;
+    }
+  </style>
+  {% endblock head %}
+</head>
+
+<body>
+  {% block myContent %}
+
+  <div class="container">
+    <h1>All Courses</h1>
+
+    <div class="class-presence">
+      <div class="class-card">
+        <h2 class="teacher-name">ENG.MOHAMMED</h2>
+        
+    
+        <button onclick="window.location.href='/COURSES/SA0359'" class="btn btn-primary" style="background-color: rgb(0, 110, 255);">Class C</button>
+
+      </div>
+      <div class="class-card">
+        <h2 class="teacher-name">ENG.fahad</h2>
+        
+        
+        <button onclick="window.location.href='/COURSES/PB0086'" class="btn btn-primary" style="background-color: rgb(0, 110, 255);">Class C</button>
+
+      
+      </div>
+
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+
+</body>
+</html>
