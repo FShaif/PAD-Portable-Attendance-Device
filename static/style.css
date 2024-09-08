@@ -1,0 +1,25 @@
+footer {
+  background-image:url(images/header-home-page.jpg);
+  background-size:contain;
+  background-repeat: no-repeat;
+
+}
+
+button[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  cursor: pointer;
+}
+.btn {
+  border: none;
+  background-color: #04AA6D;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+
+.btn:hover {
+  background-color: #04AA6D;
+  color: white;
+  opacity: 1;
+}
